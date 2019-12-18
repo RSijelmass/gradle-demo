@@ -12,6 +12,7 @@ plugins {
 
     // Version management for the library
     id 'pl.allegro.tech.build.axion-release' version '1.10.2'
+    id 'maven-publish'
 }
 
 repositories {
@@ -32,7 +33,22 @@ dependencies {
 }
 
 project.version = scmVersion.version
+group = 'org.rita'
 
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'gradleDemoLibrary'
+            url = "file://${buildDir}/repo"
+        }
+    }
+}
 jar {
     manifest {
         attributes('Implementation-Title': project.name,
