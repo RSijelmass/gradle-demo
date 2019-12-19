@@ -14,6 +14,6 @@ public class LibraryTest {
 
     @Test public void testSomeOtherLibraryMethod() {
         Library classUnderTest = new Library();
-        assertEquals("someLibraryMethod should return 'Hello, World!'", "Hello, World!", classUnderTest.someOtherMethod());
+        assertEquals("someLibraryMethod should return a string", "I come from the library!", classUnderTest.someOtherMethod());
     }
 }

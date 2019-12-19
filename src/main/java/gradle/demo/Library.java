@@ -8,5 +8,5 @@ public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
-    public String someOtherMethod() { return "Hello, World!"; }
+    public String someOtherMethod() { return "I come from the library!"; }
 }
